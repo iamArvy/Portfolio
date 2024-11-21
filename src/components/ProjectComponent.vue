@@ -20,7 +20,7 @@
 import ButtonComponent from './ButtonComponent.vue'
 import SkillList from './SkillList.vue'
 
-const navigate = ($route: string) => {
+const navigate = ($route: string | undefined) => {
   window.open($route, '_blank')
 }
 defineProps<{
