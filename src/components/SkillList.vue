@@ -15,6 +15,8 @@ span {
   padding: 7px 12px;
   border-radius: 20px;
   background-color: hsl(0 0% 89.8%);
+  background-color: var(--secondary);
+  color: var(--primary);
   margin-right: 5px;
   font-weight: 600;
   font-size: 10px;

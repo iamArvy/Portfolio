@@ -4,12 +4,14 @@
     <p>{{ project.desc }}</p>
     <SkillList :skills="project.stack" />
     <footer>
-      <a :href="project.links.live" v-if="project.links.live">
-        <ButtonComponent>Go Live</ButtonComponent>
-      </a>
-      <a :href="project.links.github">
-        <ButtonComponent>View Code</ButtonComponent>
-      </a>
+      <!-- <a :href="project.links.live" v-if="project.links.live"> </a> -->
+      <ButtonComponent :disabled="!project.links.live" @click="navigate(project.links.live)">
+        View Live
+      </ButtonComponent>
+      <!-- <a :href="project.links.github"> </a> -->
+      <ButtonComponent :disabled="!project.links.github" @click="navigate(project.links.github)">
+        View Code
+      </ButtonComponent>
     </footer>
   </article>
 </template>
@@ -18,6 +20,9 @@
 import ButtonComponent from './ButtonComponent.vue'
 import SkillList from './SkillList.vue'
 
+const navigate = ($route: string) => {
+  window.open($route, '_blank')
+}
 defineProps<{
   project: {
     name: string

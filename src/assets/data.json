@@ -1,12 +1,18 @@
 {
-  "name": "Oluwaseyi Oke",
-  "img": "/myimg.png",
-  "job": "Web Developer",
-  "job_desc": "I'm a web developer with 5 years of experience.",
-  "description": "This is a simple Vue 3 app that uses JSON data.",
-  "contacts": [
-    { "url": "github.io/iamArvy", "icon": "bxl-github" },
-    { "url": "linkedin.com/in/oluwaseyiokewebdev", "icon": "bxl-linkedin-square" }
+  "profile": {
+    "name": "Oluwaseyi Oke",
+    "img": "/myimg.png",
+    "job": "Web Developer",
+    "desc": "I'm a web developer with 5 years of experience.",
+    "description": "This is a simple Vue 3 app that uses JSON data.",
+    "contacts": [
+      { "url": "github.io/iamArvy", "icon": "bxl-github" },
+      { "url": "linkedin.com/in/oluwaseyiokewebdev", "icon": "bxl-linkedin-square" }
+    ]
+  },
+  "jobs": [
+    { "role": "Web Developer", "value": "web development", "code": "web" },
+    { "role": "Cloud Solutions Architect", "value": "Solutions Architect", "code": "cloud" }
   ],
   "skills": ["Vue.js", "Javascript", "Laravel", "PHP", "Django", "Python"],
   "about": "I am a Certified Full-stack web developer with a passion for building innovative technological solutions and expanding my knowledge in the field of IT. I specialize in building robust web applications using technologies like PHP, Laravel, Vue JS, and Django. I also have a great understanding of managing both SQL and NoSQL databases.",
@@ -15,17 +21,16 @@
       "name": "Emporium",
       "desc": "A multi-store eccomerce store.",
       "stack": ["Laravel", "Vue", "Postgresql"],
-      "type": "web",
+      "job": "web",
       "links": {
-        "github": "google.com",
-        "live": "google.com"
+        "github": "google.com"
       }
     },
     {
       "name": "EDash",
       "desc": "A user friendly ecommerce dashboard for with analytics and content management",
       "stack": ["Laravel", "Vue", "Postgresql"],
-      "type": "web",
+      "job": "web",
       "links": {
         "github": "google.com",
         "live": "google.com"
@@ -35,7 +40,7 @@
       "name": "Connect",
       "desc": "A social media website like X.",
       "stack": ["Django", "Vue", "MongoDB"],
-      "type": "web",
+      "job": "web",
       "links": {
         "github": "google.com",
         "live": "google.com"
@@ -45,7 +50,7 @@
       "name": "Let's Chat",
       "desc": "A Real-Time chat application like Whatsapp",
       "stack": ["Django", "Vue", "MongoDB"],
-      "type": "web",
+      "job": "web",
       "links": {
         "github": "google.com",
         "live": "google.com"
@@ -55,7 +60,7 @@
       "name": "FundFusion",
       "desc": "A Crowd Funding Website where people can fund campaigns.",
       "stack": ["Laravel", "Vue", "MySQL"],
-      "type": "web",
+      "job": "web",
       "links": {
         "github": "google.com",
         "live": "google.com"
@@ -65,7 +70,20 @@
       "name": "Mailer",
       "desc": "A Gmail clone app",
       "stack": ["Django", "MongoDB", "Vue.js"],
-      "type": "web",
+      "job": "web",
+      "links": {
+        "github": "google.com",
+        "live": "google.com"
+      }
+    }
+  ],
+  "experiences": [
+    {
+      "position": "Freelance Developer",
+      "location": "Remote",
+      "period": "Aug 2023 - Present",
+      "desc": "I have worked on a variety of projects, from small web applications to large-scale enterprise systems.",
+      "job": "web",
       "links": {
         "github": "google.com",
         "live": "google.com"

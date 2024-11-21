@@ -1,8 +1,10 @@
 <template>
-  <button><slot /></button>
+  <button :class="active ? 'btn-active' : null"><slot /></button>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+defineProps<{ active?: boolean }>()
+</script>
 
 <style scoped>
 button {
@@ -12,14 +14,14 @@ button {
   border: none;
   font-weight: 400;
   text-transform: capitalize;
-
   background: transparent;
-  color: var(--secondary);
   font-size: 14px;
+  border-bottom: 3px solid var(--typography);
+  transition: all 0.2s ease-in-out;
 }
 
 button:hover {
-  border-bottom: 3px solid var(--secondary);
+  border-bottom: 3px solid black;
   border-radius: 5px;
 }
 button.btn-active {
