@@ -1,0 +1,105 @@
+{
+  "name": "Oluwaseyi Oke",
+  "img": "/myimg.png",
+  "job": "Web Developer",
+  "job_desc": "I'm a web developer with 5 years of experience.",
+  "description": "This is a simple Vue 3 app that uses JSON data.",
+  "contacts": [
+    { "url": "github.io/iamArvy", "icon": "bxl-github" },
+    { "url": "linkedin.com/in/oluwaseyiokewebdev", "icon": "bxl-linkedin-square" }
+  ],
+  "skills": ["Vue.js", "Javascript", "Laravel", "PHP", "Django", "Python"],
+  "about": "",
+  "projects": [
+    {
+      "name": "Emporium",
+      "desc": "A multi-store eccomerce store.",
+      "stack": "Laravel",
+      "type": "Website",
+      "links": {
+        "github": "google.com",
+        "live": "google.com"
+      }
+    },
+    {
+      "name": "Emporium",
+      "desc": "A multi-store eccomerce store.",
+      "stack": "Laravel",
+      "type": "Website",
+      "links": {
+        "github": "google.com",
+        "live": "google.com"
+      }
+    },
+    {
+      "name": "Emporium",
+      "desc": "A multi-store eccomerce store.",
+      "stack": "Laravel",
+      "type": "Website",
+      "links": {
+        "github": "google.com",
+        "live": "google.com"
+      }
+    },
+    {
+      "name": "Emporium",
+      "desc": "A multi-store eccomerce store.",
+      "stack": "Laravel",
+      "type": "Website",
+      "links": {
+        "github": "google.com",
+        "live": "google.com"
+      }
+    },
+    {
+      "name": "Emporium",
+      "desc": "A multi-store eccomerce store.",
+      "stack": "Laravel",
+      "type": "Website",
+      "links": {
+        "github": "google.com",
+        "live": "google.com"
+      }
+    },
+    {
+      "name": "Emporium",
+      "desc": "A multi-store eccomerce store.",
+      "stack": "Laravel",
+      "type": "Website",
+      "links": {
+        "github": "google.com",
+        "live": "google.com"
+      }
+    },
+    {
+      "name": "Emporium",
+      "desc": "A multi-store eccomerce store.",
+      "stack": "Laravel",
+      "type": "Website",
+      "links": {
+        "github": "google.com",
+        "live": "google.com"
+      }
+    },
+    {
+      "name": "Emporium",
+      "desc": "A multi-store eccomerce store.",
+      "stack": "Laravel",
+      "type": "Website",
+      "links": {
+        "github": "google.com",
+        "live": "google.com"
+      }
+    },
+    {
+      "name": "Emporium",
+      "desc": "A multi-store eccomerce store.",
+      "stack": "Laravel",
+      "type": "Website",
+      "links": {
+        "github": "google.com",
+        "live": "google.com"
+      }
+    }
+  ]
+}
