@@ -2,6 +2,7 @@
 import data from '@/assets/data.json' // Import the JSON data
 import ContactComponent from './components/ContactComponent.vue'
 import ProjectComponent from './components/ProjectComponent.vue'
+import SkillList from './components/SkillList.vue'
 </script>
 
 <template>
@@ -24,9 +25,7 @@ import ProjectComponent from './components/ProjectComponent.vue'
       </article>
       <article id="skills">
         <h1>Skills</h1>
-        <div>
-          <span v-for="(item, index) in data.skills" :key="index">{{ item }}</span>
-        </div>
+        <SkillList :skills="data.skills" />
       </article>
     </section>
     <section>
@@ -37,11 +36,6 @@ import ProjectComponent from './components/ProjectComponent.vue'
       <h1>Projects</h1>
       <div id="projects">
         <ProjectComponent v-for="(item, index) in data.projects" :key="index" :project="item" />
-        <article>
-          <h2></h2>
-          <p></p>
-          <footer><span id="lang"></span><a href="" id="view"></a></footer>
-        </article>
       </div>
       <h1>Work Experience</h1>
 
@@ -55,7 +49,7 @@ main {
   display: grid;
   grid-template-columns: 0.6fr 1fr;
   gap: 2rem;
-  width: 1000px;
+  max-width: 1000px;
   margin: 2rem auto;
 }
 section {
@@ -92,22 +86,18 @@ article {
 #skills {
   width: 100%;
 }
-#skills span {
-  padding: 7px 12px;
-  border-radius: 20px;
-  background-color: hsl(0 0% 89.8%);
-  margin-right: 5px;
-  font-weight: 600;
-  font-size: 14px;
-}
-#skills div {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-}
 #projects {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
+}
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+  #projects {
+    grid-template-columns: 1fr;
+  }
 }
 </style>

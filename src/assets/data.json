@@ -9,93 +9,63 @@
     { "url": "linkedin.com/in/oluwaseyiokewebdev", "icon": "bxl-linkedin-square" }
   ],
   "skills": ["Vue.js", "Javascript", "Laravel", "PHP", "Django", "Python"],
-  "about": "",
+  "about": "I am a Certified Full-stack web developer with a passion for building innovative technological solutions and expanding my knowledge in the field of IT. I specialize in building robust web applications using technologies like PHP, Laravel, Vue JS, and Django. I also have a great understanding of managing both SQL and NoSQL databases.",
   "projects": [
     {
       "name": "Emporium",
       "desc": "A multi-store eccomerce store.",
-      "stack": "Laravel",
-      "type": "Website",
+      "stack": ["Laravel", "Vue", "Postgresql"],
+      "type": "web",
       "links": {
         "github": "google.com",
         "live": "google.com"
       }
     },
     {
-      "name": "Emporium",
-      "desc": "A multi-store eccomerce store.",
-      "stack": "Laravel",
-      "type": "Website",
+      "name": "EDash",
+      "desc": "A user friendly ecommerce dashboard for with analytics and content management",
+      "stack": ["Laravel", "Vue", "Postgresql"],
+      "type": "web",
       "links": {
         "github": "google.com",
         "live": "google.com"
       }
     },
     {
-      "name": "Emporium",
-      "desc": "A multi-store eccomerce store.",
-      "stack": "Laravel",
-      "type": "Website",
+      "name": "Connect",
+      "desc": "A social media website like X.",
+      "stack": ["Django", "Vue", "MongoDB"],
+      "type": "web",
       "links": {
         "github": "google.com",
         "live": "google.com"
       }
     },
     {
-      "name": "Emporium",
-      "desc": "A multi-store eccomerce store.",
-      "stack": "Laravel",
-      "type": "Website",
+      "name": "Let's Chat",
+      "desc": "A Real-Time chat application like Whatsapp",
+      "stack": ["Django", "Vue", "MongoDB"],
+      "type": "web",
       "links": {
         "github": "google.com",
         "live": "google.com"
       }
     },
     {
-      "name": "Emporium",
-      "desc": "A multi-store eccomerce store.",
-      "stack": "Laravel",
-      "type": "Website",
+      "name": "FundFusion",
+      "desc": "A Crowd Funding Website where people can fund campaigns.",
+      "stack": ["Laravel", "Vue", "MySQL"],
+      "type": "web",
       "links": {
         "github": "google.com",
         "live": "google.com"
       }
     },
     {
-      "name": "Emporium",
-      "desc": "A multi-store eccomerce store.",
-      "stack": "Laravel",
-      "type": "Website",
-      "links": {
-        "github": "google.com",
-        "live": "google.com"
-      }
-    },
-    {
-      "name": "Emporium",
-      "desc": "A multi-store eccomerce store.",
-      "stack": "Laravel",
-      "type": "Website",
-      "links": {
-        "github": "google.com",
-        "live": "google.com"
-      }
-    },
-    {
-      "name": "Emporium",
-      "desc": "A multi-store eccomerce store.",
-      "stack": "Laravel",
-      "type": "Website",
-      "links": {
-        "github": "google.com",
-        "live": "google.com"
-      }
-    },
-    {
-      "name": "Emporium",
-      "desc": "A multi-store eccomerce store.",
-      "stack": "Laravel",
-      "type": "Website",
+      "name": "Mailer",
+      "desc": "A Gmail clone app",
+      "stack": ["Django", "MongoDB", "Vue.js"],
+      "type": "web",
       "links": {
         "github": "google.com",
         "live": "google.com"
