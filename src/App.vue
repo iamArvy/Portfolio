@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import data from '@/assets/data.json' // Import the JSON data
+import data from '@/assets/data.json'
 import SectionComponent from './components/SectionComponent.vue'
 import ButtonComponent from './components/ButtonComponent.vue'
 import { computed, ref } from 'vue'

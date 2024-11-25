@@ -7,7 +7,6 @@
         <span>{{ profile.job }}</span>
       </figcaption>
     </header>
-    <p>{{ profile.desc }}</p>
     <hr />
     <div>
       <ContactComponent
@@ -28,7 +27,6 @@ defineProps<{
     img: string
     name: string
     job: string
-    desc: string
     contacts: {
       icon: string
       url: string

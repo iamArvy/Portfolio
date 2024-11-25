@@ -4,12 +4,14 @@
     <p>{{ project.desc }}</p>
     <SkillList :skills="project.stack" />
     <footer>
-      <!-- <a :href="project.links.live" v-if="project.links.live"> </a> -->
-      <ButtonComponent :disabled="!project.links.live" @click="navigate(project.links.live)">
+      <ButtonComponent primary v-if="project.links.live" @click="navigate(project.links.live)">
         View Live
       </ButtonComponent>
-      <!-- <a :href="project.links.github"> </a> -->
-      <ButtonComponent :disabled="!project.links.github" @click="navigate(project.links.github)">
+      <ButtonComponent
+        primary
+        v-if="project.links.github"
+        @click="navigate('github.com/' + project.links.github)"
+      >
         View Code
       </ButtonComponent>
     </footer>
@@ -20,8 +22,9 @@
 import ButtonComponent from './ButtonComponent.vue'
 import SkillList from './SkillList.vue'
 
-const navigate = ($route: string | undefined) => {
-  window.open($route, '_blank')
+const navigate = (route: string) => {
+  const url = route.startsWith('http') ? route : `https://${route}`
+  window.open(url, '_blank')
 }
 defineProps<{
   project: {
@@ -43,6 +46,7 @@ p {
 footer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
 }
 a {
   font-size: 14px;

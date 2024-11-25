@@ -1,9 +1,13 @@
 <template>
-  <button :class="active ? 'btn-active' : null"><slot /></button>
+  <button :class="classes"><slot /></button>
 </template>
 
 <script setup lang="ts">
-defineProps<{ active?: boolean }>()
+const props = defineProps<{ active?: boolean; primary?: boolean }>()
+
+const classes = [props.active ? 'btn-active' : '', props.primary ? 'btn-primary' : ''].filter(
+  Boolean,
+)
 </script>
 
 <style scoped>
@@ -25,6 +29,12 @@ button:hover {
   border-radius: 5px;
 }
 button.btn-active {
+  color: var(--primary);
+  border-bottom: 3px solid var(--primary);
+  border-radius: 5px;
+}
+
+button.btn-primary {
   color: var(--primary);
   border-bottom: 3px solid var(--primary);
   border-radius: 5px;

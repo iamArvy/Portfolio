@@ -6,6 +6,11 @@
     </header>
     <small><i class="bx bx-calendar"></i> {{ experience.period }}</small>
     <p>{{ experience.desc }}</p>
+    <div id="workings">
+      <a :href="'https://' + item.url" v-for="(item, index) in experience.projects" :key="index">
+        <img :src="'/experiences/' + item.img" alt="" />
+      </a>
+    </div>
   </div>
   <hr v-if="!last" />
 </template>
@@ -17,6 +22,10 @@ defineProps<{
     location: string
     period: string
     desc: string
+    projects: {
+      img: string
+      url: string
+    }[]
   }
   last?: boolean
 }>()
@@ -30,5 +39,18 @@ div {
 }
 header span {
   color: var(--secondary);
+}
+a {
+  width: 50%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+img {
+  width: 100%;
+}
+@media (max-width: 768px) {
+  a {
+    width: 100%;
+  }
 }
 </style>
