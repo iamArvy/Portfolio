@@ -25,12 +25,13 @@
       }
     },
     {
-      "name": "EDash",
-      "desc": "A user friendly ecommerce dashboard for with analytics and content management",
-      "stack": ["Laravel", "Vue", "Postgresql"],
+      "name": "Lyriq",
+      "desc": "A music app for viewing lyrics of songs and downloading them.",
+      "stack": ["Vue", "Spotify API"],
       "job": "web",
       "links": {
-        "github": "iamArvy/Edash"
+        "github": "iamArvy/Lyriq",
+        "live": "lyriq.netlify.app"
       }
     },
     {
