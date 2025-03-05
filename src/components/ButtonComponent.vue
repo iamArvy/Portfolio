@@ -1,42 +1,12 @@
 <template>
-  <button :class="classes"><slot /></button>
+  <button
+    class="px-3 py-1 cursor-pointer border-b-2 border-b-gray-200 hover:border-b-primary font-semibold capitalize rounded-md transition-all ease-in-out duration-200"
+    :class="active ? 'text-primary border-b-primary border-b-2' : ''"
+  >
+    <slot />
+  </button>
 </template>
 
 <script setup lang="ts">
-const props = defineProps<{ active?: boolean; primary?: boolean }>()
-
-const classes = [props.active ? 'btn-active' : '', props.primary ? 'btn-primary' : ''].filter(
-  Boolean,
-)
+defineProps<{ active?: boolean }>()
 </script>
-
-<style scoped>
-button {
-  border-radius: 8px;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  border: none;
-  font-weight: 400;
-  text-transform: capitalize;
-  background: transparent;
-  font-size: 14px;
-  border-bottom: 3px solid var(--typography);
-  transition: all 0.2s ease-in-out;
-}
-
-button:hover {
-  border-bottom: 3px solid black;
-  border-radius: 5px;
-}
-button.btn-active {
-  color: var(--primary);
-  border-bottom: 3px solid var(--primary);
-  border-radius: 5px;
-}
-
-button.btn-primary {
-  color: var(--primary);
-  border-bottom: 3px solid var(--primary);
-  border-radius: 5px;
-}
-</style>

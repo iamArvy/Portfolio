@@ -1,28 +1,17 @@
 <template>
-  <a :href="'https://' + url">
-    <i class="bx" :class="icon"></i>
-    <span>{{ url }}</span>
+  <a
+    :href="contact.url"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="text-sm flex items-center gap-2 text-gray-500 hover:text-black transition-colors ease-in-out duration-200"
+  >
+    <Icon :icon="contact.icon" />
+    <span>{{ contact.text }}</span>
   </a>
 </template>
 
 <script setup lang="ts">
-defineProps<{ icon: string; url: string }>()
+import type { Contact } from '@/types'
+import { Icon } from '@iconify/vue'
+defineProps<{ contact: Contact }>()
 </script>
-
-<style scoped>
-a {
-  color: black;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 5px;
-  /* margin: 5px 0; */
-}
-a span {
-  color: grey;
-  transition: ease-in-out 0.2s;
-}
-a:hover span {
-  color: black;
-}
-</style>

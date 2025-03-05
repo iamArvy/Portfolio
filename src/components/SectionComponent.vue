@@ -1,6 +1,6 @@
 <template>
   <div id="container">
-    <h1>{{ title }}</h1>
+    <h1 class="my-2">{{ title }}</h1>
     <div id="content">
       <slot></slot>
     </div>
@@ -12,9 +12,3 @@ defineProps<{
   title: string
 }>()
 </script>
-
-<style scoped>
-h1 {
-  margin: 10px 0;
-}
-</style>

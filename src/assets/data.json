@@ -1,79 +1,110 @@
 {
   "profile": {
     "name": "Oluwaseyi Oke",
-    "img": "/myimg.png",
-    "job": "Web Developer",
+    "image": "/myimg.png",
     "contacts": [
-      { "url": "github.com/iamArvy", "icon": "bxl-github" },
-      { "url": "linkedin.com/in/oluwaseyiokewebdev", "icon": "bxl-linkedin-square" }
+      {
+        "url": "https://maps.app.goo.gl/17P8qssuzY6fiyMf7",
+        "icon": "fluent:location-24-filled",
+        "text": "Lagos, Nigeria"
+      },
+      {
+        "url": "mailto:iamarvy.tech@gmail.com",
+        "icon": "mingcute:mail-send-fill",
+        "text": "iamarvy.tech@gmail.com"
+      },
+      {
+        "url": "tel:+2349047745098",
+        "icon": "bx-phone-call",
+        "text": "+234 9047745098"
+      }
+    ],
+    "socials": [
+      { "url": "https://github.com/iamArvy", "icon": "skill-icons:github-dark", "label": "Github" },
+      {
+        "url": "https://linkedin.com/in/oluwaseyioke-webdev",
+        "icon": "skill-icons:linkedin",
+        "label": "LinkedIn"
+      },
+      { "url": "https://wa.link/2e231j", "icon": "logos:whatsapp-icon", "label": "Whatsapp" }
     ]
   },
   "jobs": [
     { "role": "Web Developer", "value": "web development", "code": "web" },
-    { "role": "Cloud Solutions Architect", "value": "Solutions Architect", "code": "cloud" }
+    { "role": "Cloud Solutions Architect", "value": "Solutions Architect", "code": "cloud" },
+    { "role": "DevOps Engineer", "value": "DevOps", "code": "devops" }
   ],
-  "skills": ["Vue.js", "Javascript", "Laravel", "PHP", "Django", "Python"],
-  "about": "I am a Certified Full-stack web developer dedicated to crafting innovative tech solutions.\n \nI excel in building robust web applications with PHP, Laravel, Vue JS, and Django, and I possess strong expertise in managing both SQL and NoSQL databases.",
+  "stack": [
+    { "name": "Vue.js", "job": "web", "icon": "logos:vue" },
+    { "name": "Javascript", "job": "web", "icon": "logos:javascript" },
+    { "name": "Laravel", "job": "web", "icon": "logos:laravel" },
+    { "name": "PHP", "job": "web", "icon": "logos:php" },
+    { "name": "Django", "job": "web", "icon": "logos:django-icon" },
+    { "name": "Python", "job": "web", "icon": "logos:python" },
+    { "name": "Postgresql", "job": "web", "icon": "logos:postgresql" },
+    { "name": "MySQL", "job": "web", "icon": "logos:mysql" },
+    { "name": "MongoDB", "job": "web", "icon": "skill-icons:mongodb" },
+    { "name": "TailwindCSS", "job": "web", "icon": "logos:tailwindcss-icon" },
+    { "name": "Typescript", "job": "web", "icon": "logos:typescript-icon" },
+    { "name": "Inertia.js", "job": "web", "icon": "tabler:brand-inertia" },
+    { "name": "AWS", "job": "cloud", "icon": "logos:aws" },
+    { "name": "Kubernetes", "job": "devops", "icon": "logos:kubernetes" },
+    { "name": "Cloud Formation", "job": "cloud", "icon": "logos:aws-cloudformation" },
+    { "name": "Docker", "job": "devops", "icon": "logos:docker-icon" },
+    { "name": "Terraform", "job": "cloud", "icon": "logos:terraform-icon" },
+    { "name": "Jenkins", "job": "devops", "icon": "logos:jenkins" },
+    { "name": "Github Actions", "job": "devops", "icon": "logos:github-actions" }
+  ],
+  "about": "I’m a Full-Stack Web Developer, Cloud Solutions Architect, and DevOps Engineer specializing in AWS cloud-native solutions. I design and build scalable, secure, and high-performance applications, leveraging automation and modern development practices to streamline workflows and optimize efficiency. With a strong DevOps mindset, I focus on reliability, cost optimization, and seamless deployments to deliver robust digital solutions.",
   "projects": [
+    {
+      "name": "KGCF",
+      "desc": "Built a backend for a church website with an events, livestream, donation system and a custom ad,min panel.",
+      "stack": ["PHP", "MySQL"],
+      "job": "web",
+      "links": { "live": "kgcfellowship.org" }
+    },
+    {
+      "name": "Leenkonnect",
+      "desc": "A web platform for an IT Consulting company with a blog, services, consultation, e-commerce and a custom admin panel among other features.",
+      "stack": ["Laravel", "Inertia", "Vue.js", "MySQL", "TailwindCSS", "Typescript"],
+      "job": "web",
+      "links": { "live": "api.leenovative.com" }
+    },
     {
       "name": "Emporium",
       "desc": "A multi-store eccomerce store.",
       "stack": ["Laravel", "Vue", "Postgresql"],
       "job": "web",
-      "links": {
-        "github": "iamArvy/Emporium"
-      }
+      "links": { "github": "iamArvy/Emporium" }
     },
     {
       "name": "EDash",
       "desc": "A user friendly ecommerce dashboard for with analytics and content management",
       "stack": ["Laravel", "Vue", "Postgresql"],
       "job": "web",
-      "links": {
-        "github": "iamArvy/Edash"
-      }
+      "links": { "github": "iamArvy/Edash" }
     },
     {
       "name": "Connect",
       "desc": "A social media website like X.",
       "stack": ["Django", "Vue", "MongoDB"],
       "job": "web",
-      "links": {
-        "github": "iamArvy/Connect"
-      }
+      "links": { "github": "iamArvy/Connect" }
     },
     {
       "name": "Chatter",
       "desc": "A Real-Time chat application like Whatsapp",
       "stack": ["Django", "Vue", "MongoDB"],
       "job": "web",
-      "links": {
-        "github": "iamArvy/Chatter"
-      }
+      "links": { "github": "iamArvy/Chatter" }
     },
     {
       "name": "FundFusion",
       "desc": "A Crowd Funding Website where people can fund campaigns.",
       "stack": ["Laravel", "Vue", "MySQL"],
       "job": "web",
-      "links": {
-        "github": "iamArvy/FundFusion"
-      }
-    }
-  ],
-  "experiences": [
-    {
-      "position": "Freelance Developer",
-      "location": "Remote",
-      "period": "Aug 2023 - Present",
-      "desc": "I have worked on a variety of projects for diverse clients, from small web applications to large enterprise solutions, consistently delivering high-quality, tailored results.",
-      "job": "web",
-      "projects": [
-        {
-          "img": "kgcf.png",
-          "url": "kgcfellowship.org"
-        }
-      ]
+      "links": { "github": "iamArvy/FundFusion" }
     }
   ]
 }

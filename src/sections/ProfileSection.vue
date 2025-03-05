@@ -1,78 +1,34 @@
 <template>
-  <article>
-    <header>
-      <figure><img :src="profile.img" alt="" /></figure>
-      <figcaption>
-        <h1>{{ profile.name }}</h1>
-        <span>{{ profile.job }}</span>
-      </figcaption>
+  <div class="flex flex-col gap-4">
+    <header class="flex flex-col gap-4">
+      <figure
+        class="min-w-[250px] max-h-[250px] rounded-full overflow-hidden self-center bg-gray-200"
+      >
+        <img :src="profile.image" alt="" class="w-full" />
+      </figure>
+      <div class="flex flex-col gap-1">
+        <h1 class="font-bold text-primary text-2xl">{{ profile.name }}</h1>
+        <span class="text-md text-secondary">
+          <template v-for="(job, index) in jobs">
+            {{ job.role }}<template v-if="index !== jobs.length - 1">, </template>
+          </template>
+        </span>
+        <ContactComponent v-for="(item, index) in profile.contacts" :key="index" :contact="item" />
+      </div>
     </header>
     <hr />
-    <div>
-      <ContactComponent
-        v-for="(item, index) in profile.contacts"
-        :key="index"
-        :icon="item.icon"
-        :url="item.url"
-      />
+    <div class="flex items-center gap-3">
+      <SocialComponent v-for="(item, index) in profile.socials" :key="index" :social="item" />
     </div>
-  </article>
+  </div>
 </template>
 
 <script setup lang="ts">
-import ContactComponent from '@/components/ContactComponent.vue'
+import { SocialComponent, ContactComponent } from '@/components'
+import type { Job, Profile } from '@/types'
 
 defineProps<{
-  profile: {
-    img: string
-    name: string
-    job: string
-    contacts: {
-      icon: string
-      url: string
-    }[]
-  }
-  jobs: {
-    role: string
-  }[]
+  profile: Profile
+  jobs: Job[]
 }>()
 </script>
-
-<style scoped>
-figure {
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  background-color: grey;
-  overflow: hidden;
-  align-self: center;
-}
-img {
-  width: 100%;
-}
-
-div > a + a {
-  margin-top: 5px;
-}
-
-header span {
-  color: var(--secondary);
-  font-size: 14px;
-}
-
-header {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-@media (max-width: 768px) {
-  header {
-    flex-direction: row;
-    gap: 20px;
-  }
-  figure {
-    width: 50px;
-    height: 50px;
-  }
-}
-</style>

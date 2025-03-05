@@ -1,55 +1,46 @@
 <template>
-  <article>
-    <h2>{{ project.name }}</h2>
-    <p>{{ project.desc }}</p>
-    <SkillList :skills="project.stack" />
-    <footer>
-      <ButtonComponent primary v-if="project.links.live" @click="navigate(project.links.live)">
+  <CardComponent :title="project.name">
+    <p class="flex-1">{{ project.desc }}</p>
+    <div class="flex flex-wrap gap-2">
+      <span
+        v-for="skill in project.stack"
+        :key="skill"
+        class="font-semibold border-primary border-2 py-1 px-2 rounded-full text-sm"
+      >
+        {{ skill }}
+      </span>
+    </div>
+    <div class="grid grid-cols-2 gap-2">
+      <ButtonComponent
+        primary
+        v-if="project.links.live"
+        @click="navigate(project.links.live)"
+        active
+      >
         View Live
       </ButtonComponent>
       <ButtonComponent
-        primary
+        active
         v-if="project.links.github"
         @click="navigate('github.com/' + project.links.github)"
       >
         View Code
       </ButtonComponent>
-    </footer>
-  </article>
+    </div>
+  </CardComponent>
 </template>
 
 <script setup lang="ts">
-import ButtonComponent from './ButtonComponent.vue'
-import SkillList from './SkillList.vue'
+import type { Project } from '@/types'
+import { CardComponent, ButtonComponent } from '.'
 
 const navigate = (route: string) => {
   const url = route.startsWith('http') ? route : `https://${route}`
   window.open(url, '_blank')
 }
 defineProps<{
-  project: {
-    name: string
-    desc: string
-    stack: string[]
-    links: {
-      live?: string
-      github: string
-    }
-  }
+  project: Project
 }>()
 </script>
 
-<style scoped>
-p {
-  flex: 1;
-}
-footer {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-}
-a {
-  font-size: 14px;
-  color: black;
-}
-</style>
+<style scoped></style>
